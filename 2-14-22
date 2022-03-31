@@ -1,0 +1,35 @@
+--SELECT * FROM Country ORDER by Name --* means to get all the elements from the Country Table in order
+
+--SELECT Name, LifeExpectancy FROM Country ORDER by Name --* means to get the Name and Life Expectancy columns from the Country Table in order
+
+--SELECT Name, LifeExpectancy AS "Life Expectancy" FROM Country ORDER by Name-- Adding a space between Life and Expectancy by changing the column name by using AS
+
+-- The double quotes around Life and Expectancy were mentioned as there was a space needed betweem them. They are often used such as for an identifier in a table.
+
+-- Single quotes are used for literal strings
+
+-- the AS key is omitted in some SQL database softwares.
+
+--USING THE SELECT CLAUSE FUNCTION 
+
+--SELECT Name, Continent, Region FROM Country WHERE Continent= 'Europe';
+
+-- WHERE is a clause that is used to select only a subset of Continent where Continent is Europe is Single quotations.
+
+--SELECT Name, Continent, Region FROM Country WHERE Continent= 'Europe' ORDER by Name;
+
+-- The Table is ordered by the Name Column
+
+--SELECT Name, Continent, Region FROM Country WHERE Continent= 'Europe' ORDER by Name LIMIT 5;
+
+-- The LIMIT clause limits the number of elements presented to a set amount which is written right next to it.
+
+SELECT Name, Continent, Region FROM Country WHERE Continent= 'Europe' ORDER by Name LIMIT 5 OFFSET 5;
+
+--The OFFSET clause skips the first 5 elements(This offset amount can vary) and presents the next 5.
+
+-- The ORDER clause has to be after the WHERE clause, LIMIT and OFFSET need to be last.FROM Needs to be first
+
+-- FROM >> WHERE>> ORDER by>> LIMIT >> OFFSET.
+
+-- The WHERE clause is used to refer to a particular row type in the table and the ORDER by, LIMIT, and OFFSET clauses are used for making changes in representation of that particular row type.

@@ -1,0 +1,49 @@
+
+--1. UPDATE function
+
+SELECT * FROM customer;
+
+UPDATE customer SET address= '123 Music Avenue', zip= '98056' WHERE id=5;
+
+UPDATE customer SET address= '2603 S Washington St', zip= '98056' WHERE id=5;
+
+UPDATE customer SET address= NULL, zip= NULL WHERE id=5;
+
+-- The WHERE Clause allows to specify which clause to update.
+
+--2. DELETE Function
+
+SELECT * FROM customer;
+
+DELETE FROM customer WHERE id=8;
+
+-- The WHERE Function is used to specify which row to delete.
+
+
+--3. Creating Tables:
+
+-- Create Table Statement(This Statement can be written on one line too):
+
+CREATE TABLE test(
+    a INTEGER,
+    b TEXT
+    );
+
+-- The parameters inside the statement are called the column schema
+
+-- CREATE TABLE test(
+--"table name" "table type",
+-- "table name" "table type"
+--);
+
+-- We cannot have a comma after the last item.
+
+-- A table named "test" is created under the 'test' database.
+
+INSERT INTO test VALUES (1, 'a');
+INSERT INTO test VALUES (2, 'b');
+INSERT INTO test VALUES (2, 'c');
+SELECT * FROM test;
+
+-- Selecting lines 43, 44, 45, and 46 and running them together enters the data into the table 'test' in the order which was specified.
+

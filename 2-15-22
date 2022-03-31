@@ -1,0 +1,49 @@
+--1. Specifying specific columns from a database:
+SELECT Name, Continent, Region FROM Country;
+
+--2. Changing the column Name: 
+SELECT Name AS Country, Continent, Region FROM Country;
+
+-- The "Name" in the name column changes to "Country"
+
+--3. Changing the Order of Columns Printed:
+SELECT Name AS Country, Region, Continent FROM Country;
+
+-- The "Region" column comes before the "Continent" column due to the order.
+
+SELECT Region, Continent, Name AS Country FROM Country;
+
+-- The "Name" column is given the title name Country and is presented after the "Continent" column.
+
+--4. Counting Rows: 
+
+SELECT COUNT(*) FROM Country; 
+
+-- It returns "239" which is the number of rows in the "Country" table.
+
+SELECT COUNT(*) FROM Country WHERE Population > 1000000; 
+
+-- Output: 154. The number of rows counted can be limited by specifying the category using the "WHERE" Clause.
+
+SELECT COUNT(*) FROM Country WHERE Population> 100000000 AND Continent= 'Europe'; 
+
+-- Output: 1. Further specification can be made using the "AND" clause.
+
+--5. Counting Rows from Specific Columns: 
+SELECT COUNT(LifeExpectancy) FROM Country; 
+
+--Output: 222. Only the number of rows for the LifeExpectancy column are shown based on the available data in that column.
+ 
+--6. Adding rows to a table into using the INSERT INTO statement
+
+SELECT * FROM customer;
+ 
+INSERT INTO customer (name, address, city, state, zip)
+    VALUES ('Fred Flintstone', '123 Cobblestone Way', 'Bedrock', 'CA', '91234');
+
+INSERT INTO customer (name, city, state)
+    VALUES ('Jimi Hendrix', 'Renton','WA');
+    
+-- Higlight INSERT text, then press F9. Then run turn the cursor to the SELECT statement and press F9 to check the added the row.
+-- If some parameters are not specified in a row, they are assigned a NULL value in the column. 
+
